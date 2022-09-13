@@ -103,12 +103,21 @@
   letter-spacing: 0.02em;
   padding-right: 0px;
   padding-left: 40px;
+  position: relative;
   /* background-color: #2196f3; */
 }
 .link-nav:hover {
   color: #2196f3;
   cursor: pointer;
   background-color: #ffffff;
+}
+.link-nav:after:hover {
+  display: block;
+  content: "";
+
+  height: 4px;
+  color: rgb(86, 222, 18);
+  text-decoration: line-through;
 }
 .link-contact {
   text-decoration: none;
@@ -621,7 +630,7 @@
   transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.description-box {
+/* .description-box {
   position: absolute;
   background-color: #ef233c;
   font-family: "Roboto";
@@ -635,7 +644,7 @@
 
   color: #ffffff;
   z-index: 1;
-}
+} */
 .box .label {
   position: absolute;
   /* left: 4px; */
