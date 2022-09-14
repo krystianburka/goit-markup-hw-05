@@ -102,22 +102,15 @@
   line-height: 171%;
   letter-spacing: 0.02em;
   padding-right: 0px;
-  padding-left: 40px;
+  margin-left: 20pxpx;
+  margin-right: 20px;
   position: relative;
-  /* background-color: #2196f3; */
+  /* background-color: #b421f3; */
 }
 .link-nav:hover {
   color: #2196f3;
   cursor: pointer;
   background-color: #ffffff;
-}
-.link-nav:after:hover {
-  display: block;
-  content: "";
-
-  height: 4px;
-  color: rgb(86, 222, 18);
-  text-decoration: line-through;
 }
 .link-contact {
   text-decoration: none;
@@ -129,6 +122,23 @@
   padding-right: 0px;
   margin-right: 15px;
   /* background-color: #58d23f; */
+}
+.underline {
+  display: inline-block;
+  color: #2196f3;
+  position: relative;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #2196f3;
+  bottom: -37px;
+  left: 0;
+  /* transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s linear; */
 }
 /* .link-contact::before,
 .link-contact::after {
@@ -312,8 +322,10 @@
 
 .box {
   /* padding: 10px; */
-  margin: 0;
+  margin-bottom: 35px;
   position: relative;
+  overflow: hidden;
+  z-index: 2;
   /* background-color: #2196f3; */
 }
 
@@ -468,6 +480,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
+  z-index: 1;
 }
 
 .figure-team {
@@ -485,10 +498,11 @@
 }
 
 .figure-portfolio {
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 0;
   border-radius: 1%;
   border: 1px solid #eeeeee;
+  overflow: hidden;
   /* background-color: #923e3e; */
 }
 .figure-portfolio:hover {
@@ -666,4 +680,46 @@
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.onlay {
+  display: flex;
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  color: transparent;
+  text-align: justify;
+  padding: 35px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+  letter-spacing: 0.03em;
+  z-index: 1;
+  /*  Задаём значения перехода  */
+}
+
+/* При ховере меняем значения анимируемых свойств */
+.onlay:hover {
+  animation-name: changeBgColor;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  background-color: rgba(33, 150, 243, 0.9);
+  animation-direction: alternate;
+  color: #ffffff;
+  z-index: 1;
+}
+
+@keyframes changeBgColor {
+  0% {
+    transform: translateY(370px);
+  }
+  50% {
+    transform: translateY(185px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
