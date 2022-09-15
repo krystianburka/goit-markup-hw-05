@@ -61,7 +61,7 @@
           </h1>
 
           <div>
-            <button class="button-studio">Zamów usługę</button>
+            <button class="button-studio" data-modal-open>Zamów usługę</button>
           </div>
         </div>
       </section>
@@ -368,6 +368,17 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        
+          <svg class="close-button" data-modal-close>
+            <use href="./images/icons.svg#close-button"></use>
+        </svg>
+       
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
+
   </body>
 </html>

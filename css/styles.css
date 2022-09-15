@@ -325,7 +325,7 @@
   margin-bottom: 35px;
   position: relative;
   overflow: hidden;
-  z-index: 2;
+
   /* background-color: #2196f3; */
 }
 
@@ -504,6 +504,7 @@
   border: 1px solid #eeeeee;
   overflow: hidden;
   /* background-color: #923e3e; */
+  /* z-index: 2; */
 }
 .figure-portfolio:hover {
   margin: 0 auto;
@@ -681,6 +682,16 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.box-onlay {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* background-color: #cf9a9a; */
+
+  overflow: hidden;
+}
 
 .onlay {
   display: flex;
@@ -723,3 +734,67 @@
     transform: translateY(0px);
   }
 }
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+}
+.close-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* .box:hover .overlay {
+  transform: translatex(0);
+}
+
+.onlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3f51b5;
+
+  transform: translatex(-100%);
+  transition: transform 250ms ease;
+}
+
+.onlay > p {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.onlay code {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #2a2a2a;
+} */
